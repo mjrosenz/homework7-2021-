@@ -55,21 +55,21 @@ document.querySelector("#play").addEventListener
  ("click", function(){
 	if (video.muted === false) {
 		video.muted = true;
-		document.querySelector("#mute").innerHTML = "unmute";
+		document.querySelector("#mute").innerHTML = "Unmute";
 	}
 	else {
 		video.muted = false;
-		document.querySelector("#mute").innerHTML = "mute";
+		document.querySelector("#mute").innerHTML = "Mute";
 	}
  });
 
  document.querySelector("#skip").addEventListener
  ("click", function(){
 	if (video.ended == true) {
-		video.play()
+		video.autoplay();
 	}
 	else{
-		console.log(video.currentTime)
+		console.log(video.currentTime);
 		video.currentTime += 15
 	}
  });
