@@ -66,8 +66,7 @@ document.querySelector("#play").addEventListener
  document.querySelector("#skip").addEventListener
  ("click", function(){
 	if (video.currentTime + 15 >= video.duration) {
-		video.load();
-		video.play();
+		video.currentTime = 0;
 	}
 	else{
 		console.log(video.currentTime);
