@@ -65,8 +65,9 @@ document.querySelector("#play").addEventListener
 
  document.querySelector("#skip").addEventListener
  ("click", function(){
-	if (video.ended == true) {
-		video.autoplay();
+	if (video.currentTime + 15 >= video.duration) {
+		video.load();
+		video.play();
 	}
 	else{
 		console.log(video.currentTime);
